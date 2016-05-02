@@ -1,8 +1,8 @@
 {
     "lib": {
         "www": {
-            "url": "../webapp",
-            "link": true
+            "url": "www",
+            "link": false
         }
     }
 }
