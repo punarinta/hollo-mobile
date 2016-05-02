@@ -19,4 +19,5 @@
         <icon src="assets/icon.png" density="xxhdpi" />
         <icon src="assets/icon.png" density="xxxhdpi" />
     </platform>
+    <allow-navigation href="*" />
 </widget>
