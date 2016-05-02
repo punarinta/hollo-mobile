@@ -9,6 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <preference name="android-minSdkVersion" value="19" />
     <icon src="assets/icon.png" />
     <platform name="android">
         <icon src="assets/icon.png" density="ldpi" />
