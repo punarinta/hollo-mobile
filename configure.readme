@@ -2,4 +2,5 @@ sudo npm install -g phonegap@latest
 sudo npm install -g cordova
 ln -s ../webapp www
 cordova platform add android
+cordova plugin add cordova-plugin-file
 ./build.sh
