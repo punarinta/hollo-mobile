@@ -1,9 +1,28 @@
-#!/bin/sh
+#!/bin/bash
 
-cordova build android
-# cordova build android --release -- --buildConfig=build.json
-cp platforms/android/build/outputs/apk/android-debug.apk Hollo.apk
-cp platforms/android/ant-build/CordovaApp-debug.apk Hollo.apk
+# Check 2 arguments are given
+if [ $# -lt 1 ]
+then
+        echo "Usage : BUILD [ debug | release ]"
+        echo ""
+        exit
+fi
+
+case "$1" in
+    'debug') echo "Building in debug mode..."
+        cordova build android
+        cp platforms/android/build/outputs/apk/android-debug.apk Hollo.apk
+        cp platforms/android/ant-build/CordovaApp-debug.apk Hollo.apk
+        ;;
+    'release') echo "Building in release mode..."
+        cordova build android --release -- --buildConfig=build.json
+        cp platforms/android/build/outputs/apk/android-release.apk Hollo.apk
+        cp platforms/android/ant-build/CordovaApp-release.apk Hollo.apk
+        ;;
+esac
+
+echo "Installing..."
+
 adb install -r ./Hollo.apk
 adb shell am force-stop email.hollo.app
 adb shell am start -a android.intent.action.MAIN -n email.hollo.app/.CordovaApp
