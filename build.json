@@ -1,0 +1,18 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "android.keystore",
+            "storePassword": "hollo-world",
+            "alias": "debug-key",
+            "password" : "hollo-world",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "android.keystore",
+            "storePassword": "hollo-world",
+            "alias": "release-key",
+            "password" : "hollo-world",
+            "keystoreType": ""
+        }
+    }
+}
