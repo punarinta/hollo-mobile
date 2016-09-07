@@ -3,7 +3,7 @@
         "debug": {
             "keystore": "android.keystore",
             "storePassword": "hollo-world",
-            "alias": "debug-key",
+            "alias": "release-key",
             "password" : "hollo-world",
             "keystoreType": ""
         },
