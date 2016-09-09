@@ -7,8 +7,11 @@
 <style>
     body {background:#0001f7;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}
     #logo {display:flex;align-items:center;flex-direction:column}
-    .hollo-loader-big {position:relative;margin-top: 20px;transform:none;float:none;top:auto;left:auto}
-    .hollo-loader-big span {
+    #retry {display:none;color:#fff;justify-content:center;flex-direction:column;align-items:center;text-align: center}
+    #btn-retry {border:1px #fff solid;border-radius:2px;background:#0001f7;padding:3px 5px;width:33vw;height:48px}
+    #hollo-loader-big {position:relative;margin-top:20px;transform:none;float:none;top:auto;left:auto}
+    #btn-retry, #retry {color:#fff;font:1.154rem sans-serif;margin-top:30px}
+    #hollo-loader-big span {
         float: left;
         display: block;
         height: 6px;
@@ -25,7 +28,7 @@
         animation-iteration-count: infinite;
         animation-direction: alternate
     }
-    .hollo-loader-big span:nth-of-type(odd) {
+    #hollo-loader-big span:nth-of-type(odd) {
         animation: load-anim-small2 300ms;
         -webkit-animation: load-anim-small2 300ms;
         animation-fill-mode: forwards;
@@ -35,9 +38,9 @@
         animation-iteration-count: infinite;
         animation-direction: alternate
     }
-    .hollo-loader-big span:first-of-type {border-radius:0 8px 8px 0;margin-left:0}
-    .hollo-loader-big span:last-of-type {border-radius:8px 0 0 8px;margin-right:0}
-    .hollo-loader-big span {height: 10px;width: 24px;margin:0 -4px;background-color:#fff}
+    #hollo-loader-big span:first-of-type {border-radius:0 8px 8px 0;margin-left:0}
+    #hollo-loader-big span:last-of-type {border-radius:8px 0 0 8px;margin-right:0}
+    #hollo-loader-big span {height: 10px;width: 24px;margin:0 -4px;background-color:#fff}
     @keyframes load-anim-small
     {
         0% {transform: rotate(-30deg) scaleX(1.2)}
@@ -76,24 +79,35 @@
             <path d="M62.36,45.576 C72.656,45.576 80.72,37.728 80.72,27.288 C80.72,16.848 72.656,9 62.36,9 C52.064,9 44,16.848 44,27.288 C44,37.728 52.064,45.576 62.36,45.576 Z M62.36,36.648 C57.32,36.648 53.792,32.688 53.792,27.288 C53.792,21.96 57.176,18 62.36,18 C67.472,18 70.856,21.96 70.856,27.288 C70.856,32.688 67.472,36.648 62.36,36.648 Z" id="Combined-Shape"></path>
         </g>
     </svg>
-    <div class="hollo-loader-big">
+    <div id="hollo-loader-big">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div>
+    <div id="retry">
+        <div>Check your Internet connection<br>and press "Retry"</div>
+        <button id="btn-retry">Retry</button>
+    </div>
 </div>
 
 </body>
 <script src="cordova.js"></script>
 <script>
-    document.addEventListener('deviceready', function ()
+    function go()
     {
         if (navigator.connection.type == 0 || navigator.connection.type == 'none' || navigator.connection.type == 'unknown')
-            alert('Connect to Internet and restart the app.');
+        {
+            document.getElementById('retry').style.display = 'flex';
+            document.getElementById('hollo-loader-big').style.display = 'none';
+        }
         else
+        {
             window.location.href = 'https://app.hollo.email/?foobar=' + Math.random();
-    }, false);
+        }
+    }
+    document.getElementById('btn-retry').onclick = go;
+    document.addEventListener('deviceready', go, false);
 </script>
 </html>

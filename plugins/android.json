@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "email.hollo.app"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "email.hollo.app"
         }
     },
     "dependent_plugins": {}
