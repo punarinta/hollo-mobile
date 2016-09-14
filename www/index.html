@@ -91,7 +91,7 @@
         <button id="btn-retry">Retry</button>
     </div>
 </div>
-
+<iframe name="frame" id="frame" src="" style="display:none;width:100vw;height:100vh;position:fixed;top:0;left:0;border:0"></iframe>
 </body>
 <script src="cordova.js"></script>
 <script>
@@ -104,7 +104,25 @@
         }
         else
         {
-            window.location.href = 'https://app.hollo.email/?foobar=' + Math.random();
+            document.getElementById('logo').style.display = 'none';
+            document.getElementById('frame').style.display = 'block';
+            document.getElementById('frame').src = 'https://app.hollo.email/?foobar=' + Math.random() + '&platform=' + device.platform.toUpperCase();
+            window.addEventListener('message', function (e)
+            {
+                if (~e.origin.indexOf('https://app.hollo.email'))
+                {
+                    console.log('Received:', e.data);
+                    if (e.data.cmd == 'openUrl')
+                    {
+                        if (!!e.data.external) navigator.app.loadUrl(e.data.url, { openExternal: true });
+                        else cordova.InAppBrowser.open(e.data.url, 'frame');
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+            });
         }
     }
     document.getElementById('btn-retry').onclick = go;
