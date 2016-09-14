@@ -114,6 +114,8 @@
                     // console.log('Received:', e.data);
                     if (e.data.cmd == 'openUrl')
                     {
+                        // http://stackoverflow.com/questions/17887348/phonegap-open-link-in-browser
+
                         if (!!e.data.external) navigator.app.loadUrl(e.data.url, { openExternal: true });
                         //else cordova.InAppBrowser.open(e.data.url, 'frame');
                         else window.location.href = e.data.url;
