@@ -95,6 +95,8 @@
 </body>
 <script src="cordova.js"></script>
 <script>
+    var frame = document.getElementById('frame');
+
     function go()
     {
         if (navigator.connection.type == 0 || navigator.connection.type == 'none' || navigator.connection.type == 'unknown')
@@ -105,8 +107,8 @@
         else
         {
             document.getElementById('logo').style.display = 'none';
-            document.getElementById('frame').style.display = 'block';
-            document.getElementById('frame').src = 'https://app.hollo.email/?foobar=' + Math.random() + '&platform=' + device.platform.toUpperCase();
+            frame.style.display = 'block';
+            frame.src = 'https://app.hollo.email/?foobar=' + Math.random() + '&platform=' + device.platform.toUpperCase();
             window.addEventListener('message', function (e)
             {
                 if (~e.origin.indexOf('https://app.hollo.email'))
@@ -119,6 +121,21 @@
                         if (!!e.data.external) navigator.app.loadUrl(e.data.url, { openExternal: true });
                         //else cordova.InAppBrowser.open(e.data.url, 'frame');
                         else window.location.href = e.data.url;
+                    }
+                    if (e.data.cmd == 'onAuth')
+                    {
+                        FCMPlugin.onNotification(frame.contentWindow.parented.fcmNotification,
+                        function (msg)
+                        {
+                            console.log('onNotification callback registered:', msg);
+                        },
+                        function (err)
+                        {
+                            console.log('Error registering onNotification callback:', err);
+                        });
+
+                        console.log('FCM: subscribe to user-' + e.data.user.id);
+                        FCMPlugin.subscribeToTopic('user-' + e.data.user.id);
                     }
                 }
                 else
