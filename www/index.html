@@ -95,7 +95,7 @@
 </body>
 <script src="cordova.js"></script>
 <script>
-    var frame = document.getElementById('frame');
+    var frame = document.getElementById('frame'), loginWindow;
 
     function go()
     {
@@ -118,8 +118,11 @@
                     {
                         // http://stackoverflow.com/questions/17887348/phonegap-open-link-in-browser
 
-                        if (!!e.data.external) navigator.app.loadUrl(e.data.url, { openExternal: true });
-                        //else cordova.InAppBrowser.open(e.data.url, 'frame');
+                        if (!!e.data.external)
+                        {
+                            console.log('External link:', e.data.url);
+                            navigator.app.loadUrl(e.data.url, { openExternal: true });
+                        }
                         else window.location.href = e.data.url;
                     }
                     if (e.data.cmd == 'onAuth')
