@@ -22,5 +22,7 @@
     <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="market://*/*" />
+    <allow-intent href="calshow://*/*" />
     <engine name="android" spec="~5.0.0" />
 </widget>
