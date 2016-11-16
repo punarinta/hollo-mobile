@@ -7,5 +7,6 @@ cordova plugin add cordova-plugin-network-information
 cordova plugin add cordova-plugin-inappbrowser
 cordova plugin add cordova-plugin-device
 cordova plugin add cordova-plugin-fcm
+cordova plugin add cordova-plugin-statusbar
 keytool -genkey -v -keystore android.keystore -alias release-key -keyalg RSA -keysize 2048 -validity 10000
 ./build
