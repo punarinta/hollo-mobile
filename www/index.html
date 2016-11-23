@@ -99,6 +99,7 @@
 
     function go()
     {
+        StatusBar.hide();
         if (navigator.connection.type == 0 || navigator.connection.type == 'none' || navigator.connection.type == 'unknown')
         {
             document.getElementById('retry').style.display = 'flex';
@@ -125,7 +126,7 @@
                         }
                         else window.location.href = e.data.url;
                     }
-                    if (e.data.cmd == 'onAuth')
+                    else if (e.data.cmd == 'onAuth')
                     {
                         FCMPlugin.onNotification(frame.contentWindow.parented.fcmNotification,
                         function (msg)
@@ -139,6 +140,12 @@
 
                         console.log('FCM: subscribe to user-' + e.data.user.id);
                         FCMPlugin.subscribeToTopic('user-' + e.data.user.id);
+                    }
+                    else if (e.data.cmd == 'statusBar')
+                    {
+                        if (e.data.flag) StatusBar.show();
+                        else StatusBar.hide();
+                        if (e.data.color) StatusBar.backgroundColorByHexString(e.data.color);
                     }
                 }
                 else
