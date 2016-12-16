@@ -3,3 +3,4 @@ platforms/
 Hollo.apk
 npm-debug.log
 plugins
+.DS_Store
