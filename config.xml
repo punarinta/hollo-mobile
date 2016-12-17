@@ -2,7 +2,7 @@
 <widget id="email.hollo.app" version="0.1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Hollo</name>
     <description>
-        Hollo mobile app.
+        Hollo mobile
     </description>
     <author email="dev@hollo.email" href="https://app.hollo.email">
         Vladimir Osipov
@@ -14,6 +14,7 @@
     <preference name="StatusBarBackgroundColor" value="#7a4df9" />
     <preference name="EnableWebGL" value="true" />
     <icon src="assets/icon.png" />
+    <splash src="assets/splash.png" />
     <platform name="android">
         <icon density="ldpi" src="assets/icon.png" />
         <icon density="mdpi" src="assets/icon.png" />
@@ -26,6 +27,10 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <splash src="assets/ios/LaunchImage.appiconset/320-480.png" width="320" height="480" />
+        <splash src="assets/ios/LaunchImage.appiconset/640-960.png" width="640" height="960" />
+        <splash src="assets/ios/LaunchImage.appiconset/768-1024.png" width="768" height="1024" />
+        <splash src="assets/ios/LaunchImage.appiconset/1536-2048.png" width="1536" height="2048" />
         <icon height="60" src="assets/ios/AppIcon.appiconset/Icon-App-60x60@1x.png" width="60" />
         <icon height="120" src="assets/ios/AppIcon.appiconset/Icon-App-60x60@2x.png" width="120" />
         <icon height="76" src="assets/ios/AppIcon.appiconset/Icon-App-76x76@1x.png" width="76" />

@@ -8,6 +8,7 @@ cordova plugin add cordova-plugin-inappbrowser
 cordova plugin add cordova-plugin-device
 cordova plugin add cordova-plugin-fcm
 cordova plugin add cordova-plugin-statusbar
+cordova plugin add cordova-plugin-splashscreen
 
 keytool -genkey -v -keystore android.keystore -alias release-key -keyalg RSA -keysize 2048 -validity 10000
 
