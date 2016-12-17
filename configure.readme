@@ -8,5 +8,10 @@ cordova plugin add cordova-plugin-inappbrowser
 cordova plugin add cordova-plugin-device
 cordova plugin add cordova-plugin-fcm
 cordova plugin add cordova-plugin-statusbar
+
 keytool -genkey -v -keystore android.keystore -alias release-key -keyalg RSA -keysize 2048 -validity 10000
+
+cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.438214337744-g3fvlfhtspd14i8bqeosirdu9o3v613u
+cordova prepare
+
 ./build
