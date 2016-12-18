@@ -16,3 +16,7 @@ cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_I
 cordova prepare
 
 ./build
+
+
+android crashes:
+http://stackoverflow.com/questions/37312103/unable-to-get-provider-com-google-firebase-provider-firebaseinitprovider
