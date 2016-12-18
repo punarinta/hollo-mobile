@@ -50,6 +50,7 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="calshow://*/*" />
+    <allow-intent href="mailto:*" />
     <engine name="android" spec="~5.0.0" />
     <plugin name="cordova-plugin-googleplus" spec="~5.1.1">
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.438214337744-g3fvlfhtspd14i8bqeosirdu9o3v613u" />
