@@ -25,4 +25,4 @@ echo "Installing..."
 
 adb install -r ./Hollo.apk
 adb shell am force-stop email.hollo.app
-adb shell am start -a android.intent.action.MAIN -n email.hollo.app/.CordovaApp
+adb shell am start -a android.intent.action.MAIN -n email.hollo.app/email.hollo.app.MainActivity
