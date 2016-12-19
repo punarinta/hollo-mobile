@@ -46,7 +46,6 @@
         <icon height="50" src="assets/ios/AppIcon.appiconset/Icon-Small-50x50@1x.png" width="50" />
         <icon height="100" src="assets/ios/AppIcon.appiconset/Icon-Small-50x50@2x.png" width="100" />
     </platform>
-    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="calshow://*/*" />
