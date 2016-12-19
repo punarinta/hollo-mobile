@@ -9,6 +9,7 @@ cordova platform add android
 cordova plugin add cordova-plugin-fcm
 cordova plugin add cordova-plugin-statusbar
 // cordova plugin add cordova-plugin-splashscreen
+cordova plugin add https://github.com/napolitano/cordova-plugin-intent
 
 keytool -genkey -v -keystore android.keystore -alias release-key -keyalg RSA -keysize 2048 -validity 10000
 
@@ -16,7 +17,8 @@ cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_I
 cordova prepare
 
 [ANDROID]
-unzip assets/fcm_push_icon.zip and copy to platforms/android/res
+firebase icon: unzip assets/fcm_push_icon.zip and copy to platforms/android/res
+setup intents: https://www.npmjs.com/package/cordova-plugin-intent
 
 if crashes:
 http://stackoverflow.com/questions/37312103/unable-to-get-provider-com-google-firebase-provider-firebaseinitprovider
