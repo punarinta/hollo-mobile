@@ -15,8 +15,11 @@ keytool -genkey -v -keystore android.keystore -alias release-key -keyalg RSA -ke
 cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.438214337744-g3fvlfhtspd14i8bqeosirdu9o3v613u
 cordova prepare
 
-./build
+[ANDROID]
+unzip assets/fcm_push_icon.zip and copy to platforms/android/res
 
-
-android crashes:
+if crashes:
 http://stackoverflow.com/questions/37312103/unable-to-get-provider-com-google-firebase-provider-firebaseinitprovider
+
+
+./build
