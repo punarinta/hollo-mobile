@@ -23,6 +23,7 @@
         <icon density="xxhdpi" src="assets/icon.png" />
         <icon density="xxxhdpi" src="assets/icon.png" />
         <allow-intent href="market:*" />
+        <preference name="AndroidLaunchMode" value="singleTask"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
