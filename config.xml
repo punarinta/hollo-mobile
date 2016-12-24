@@ -32,16 +32,16 @@
         <splash src="assets/ios/LaunchImage.appiconset/640-960.png" width="640" height="960" />
         <splash src="assets/ios/LaunchImage.appiconset/768-1024.png" width="768" height="1024" />
         <splash src="assets/ios/LaunchImage.appiconset/1536-2048.png" width="1536" height="2048" />
-        <icon height="60" src="assets/ios/AppIcon.appiconset/Icon-App-60x60@1x.png" width="60" />
-        <icon height="120" src="assets/ios/AppIcon.appiconset/Icon-App-60x60@2x.png" width="120" />
-        <icon height="76" src="assets/ios/AppIcon.appiconset/Icon-App-76x76@1x.png" width="76" />
-        <icon height="152" src="assets/ios/AppIcon.appiconset/Icon-App-76x76@2x.png" width="152" />
+        <icon height="60" src="assets/ios/AppIcon.appiconset/apple-icon-60x60.png" width="60" />
+        <icon height="120" src="assets/ios/AppIcon.appiconset/apple-icon-120x120.png" width="120" />
+        <icon height="76" src="assets/ios/AppIcon.appiconset/apple-icon-76x76.png" width="76" />
+        <icon height="152" src="assets/ios/AppIcon.appiconset/apple-icon-152x152.png" width="152" />
         <icon height="40" src="assets/ios/AppIcon.appiconset/Icon-App-40x40@1x.png" width="40" />
         <icon height="80" src="assets/ios/AppIcon.appiconset/Icon-App-40x40@2x.png" width="80" />
-        <icon height="57" src="assets/ios/AppIcon.appiconset/Icon-App-57x57@1x.png" width="57" />
-        <icon height="114" src="assets/ios/AppIcon.appiconset/Icon-App-57x57@2x.png" width="114" />
-        <icon height="72" src="assets/ios/AppIcon.appiconset/Icon-App-72x72@1x.png" width="72" />
-        <icon height="144" src="assets/ios/AppIcon.appiconset/Icon-App-72x72@2x.png" width="144" />
+        <icon height="57" src="assets/ios/AppIcon.appiconset/apple-icon-57x57.png" width="57" />
+        <icon height="114" src="assets/ios/AppIcon.appiconset/apple-icon-114x114.png" width="114" />
+        <icon height="72" src="assets/ios/AppIcon.appiconset/apple-icon-72x72.png" width="72" />
+        <icon height="144" src="assets/ios/AppIcon.appiconset/apple-icon-144x144.png" width="144" />
         <icon height="29" src="assets/ios/AppIcon.appiconset/Icon-App-29x29@1x.png" width="29" />
         <icon height="58" src="assets/ios/AppIcon.appiconset/Icon-App-29x29@2x.png" width="58" />
         <icon height="50" src="assets/ios/AppIcon.appiconset/Icon-Small-50x50@1x.png" width="50" />
