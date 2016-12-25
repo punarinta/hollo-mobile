@@ -16,12 +16,12 @@
     <icon src="assets/icon.png" />
     <splash src="assets/splash.png" />
     <platform name="android">
-        <icon density="ldpi" src="assets/icon.png" />
-        <icon density="mdpi" src="assets/icon.png" />
-        <icon density="hdpi" src="assets/icon.png" />
-        <icon density="xhdpi" src="assets/icon.png" />
-        <icon density="xxhdpi" src="assets/icon.png" />
-        <icon density="xxxhdpi" src="assets/icon.png" />
+        <icon density="ldpi" src="assets/android/android-icon-36x36.png" />
+        <icon density="mdpi" src="assets/android/android-icon-48x48.png" />
+        <icon density="hdpi" src="assets/android/android-icon-72x72.png" />
+        <icon density="xhdpi" src="assets/android/android-icon-96x96.png" />
+        <icon density="xxhdpi" src="assets/android/android-icon-144x144.png" />
+        <icon density="xxxhdpi" src="assets/android/android-icon-192x192.png" />
         <allow-intent href="market:*" />
         <preference name="AndroidLaunchMode" value="singleTask"/>
     </platform>
