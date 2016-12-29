@@ -13,6 +13,10 @@
     <preference name="android-minSdkVersion" value="19" />
     <preference name="StatusBarBackgroundColor" value="#7a4df9" />
     <preference name="EnableWebGL" value="true" />
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <icon src="assets/icon.png" />
     <splash src="assets/splash.png" />
     <platform name="android">

@@ -24,4 +24,8 @@ if crashes:
 http://stackoverflow.com/questions/37312103/unable-to-get-provider-com-google-firebase-provider-firebaseinitprovider
 
 
+[IOS]
+cordova plugin add cordova-plugin-wkwebview-engine
+
+
 ./build
