@@ -2,7 +2,7 @@ sudo npm install -g phonegap@latest
 sudo npm install -g cordova
 phonegap create . "email.hollo.app" "Hollo"
 cordova platform add android
-// cordova plugin add cordova-plugin-whitelist
+cordova plugin add cordova-plugin-whitelist
 // cordova plugin add cordova-plugin-network-information
 // cordova plugin add cordova-plugin-inappbrowser
 // cordova plugin add cordova-plugin-device
