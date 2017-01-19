@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "438214337744",
+    "firebase_url": "https://hollo-1271.firebaseio.com",
+    "project_id": "hollo-1271",
+    "storage_bucket": "hollo-1271.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438214337744:android:bf60ae103e09b835",
+        "android_client_info": {
+          "package_name": "email.hollo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438214337744-7obpg6007et4f647ji8olag9olosesgu.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "438214337744-vcc0cf2j1pgdk1tbkj544lvv4alrilae.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "438214337744-vnj7d462ebprbf1ff8efaelt8457nc4h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "email.hollo.app",
+            "certificate_hash": "75:E3:4A:98:A8:32:6F:A6:E6:B8:16:FF:2A:FC:D9:F0:ED:B0:59:78"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK7SJ5T41GXLQ5slmtl_tvb_UhKmKPnSE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
