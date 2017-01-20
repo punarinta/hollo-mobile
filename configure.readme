@@ -1,15 +1,16 @@
 sudo npm install -g phonegap@latest
 sudo npm install -g cordova
 phonegap create . "email.hollo.app" "Hollo"
-cordova platform add android@5.1.1
+cordova platform add android
 cordova plugin add cordova-plugin-whitelist
 // cordova plugin add cordova-plugin-network-information
 // cordova plugin add cordova-plugin-inappbrowser
 // cordova plugin add cordova-plugin-device
-cordova plugin add cordova-plugin-fcm
+cordova plugin add cordova-plugin-fcm@1.1.5
 cordova plugin add cordova-plugin-statusbar
 // cordova plugin add cordova-plugin-splashscreen
 cordova plugin add https://github.com/napolitano/cordova-plugin-intent
+cordova plugin add cordova-plugin-crosswalk-webview
 
 keytool -genkey -v -keystore android.keystore -alias release-key -keyalg RSA -keysize 2048 -validity 10000
 
@@ -18,9 +19,10 @@ OR
 cordova plugin add https://github.com/EddyVerbruggen/cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.438214337744-g3fvlfhtspd14i8bqeosirdu9o3v613u
 cordova prepare
 
-// cordova plugin add cordova-plugin-firebase
-
 [ANDROID]
+set version to 9.2.0 in project.properties
+copy google-services.json
+
 firebase icon: unzip assets/fcm_push_icon.zip and copy to platforms/android/res
 setup intents: https://www.npmjs.com/package/cordova-plugin-intent
 
