@@ -10,7 +10,7 @@ cordova plugin add cordova-plugin-fcm@1.1.5
 cordova plugin add cordova-plugin-statusbar
 // cordova plugin add cordova-plugin-splashscreen
 cordova plugin add https://github.com/napolitano/cordova-plugin-intent
-cordova plugin add cordova-plugin-crosswalk-webview
+# cordova plugin add cordova-plugin-crosswalk-webview
 
 keytool -genkey -v -keystore android.keystore -alias release-key -keyalg RSA -keysize 2048 -validity 10000
 

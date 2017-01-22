@@ -11,13 +11,13 @@ fi
 case "$1" in
     'debug') echo "Building in debug mode..."
         cordova build android
-        cp platforms/android/build/outputs/apk/android-armv7-debug.apk Hollo.apk
-#        cp platforms/android/build/outputs/apk/android-debug.apk Hollo.apk
+#        cp platforms/android/build/outputs/apk/android-armv7-debug.apk Hollo.apk
+        cp platforms/android/build/outputs/apk/android-debug.apk Hollo.apk
         ;;
     'release') echo "Building in release mode..."
         cordova build android --release -- --buildConfig=build.json
-        cp platforms/android/build/outputs/apk/android-armv7-release.apk Hollo.apk
-#        cp platforms/android/build/outputs/apk/android-release.apk Hollo.apk
+#        cp platforms/android/build/outputs/apk/android-armv7-release.apk Hollo.apk
+        cp platforms/android/build/outputs/apk/android-release.apk Hollo.apk
         ;;
 esac
 
